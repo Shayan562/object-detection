@@ -25,7 +25,7 @@ const Items = new Schema({
 		{
 			room: { type: String, required: true },
 			item: { type: String, required: true },
-			count: { type: Number, requrired: true },
+			count: { type: Number, required: true },
 			_id: false,
 		},
 		{ _id: false },
