@@ -9,7 +9,7 @@ const getRoom = async (req, res) => {
 	const { item } = req.params;
 	const room = await getRoomSuggestion(userID, item);
 	if (!room) {
-		return res.status(200).json({ message: "Item Not in DB" });
+		return res.status(404).json({ message: "Item Not in DB" });
 	}
 	res.status(200).json({ userID, item, room });
 };

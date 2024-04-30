@@ -14,13 +14,13 @@ const login = async (req, res) => {
 	//Verify Password
 	const passwordMatch = await bcrypt.compare(password, user.password);
 	if (!passwordMatch) {
-		res.status(401).json({ message: "Invalid Credentials" });
+		return res.status(401).json({ message: "Invalid Credentials" });
 	}
 
 	//Generate Token
 	const token = jwt.sign({ userID: userID }, `${_SECRETKEY}`);
 	req.userID = userID;
-	res.status(200).json({ authorization: `bearer ${token}` });
+	return res.status(200).json({ authorization: `bearer ${token}` });
 	// res.json({ hashedPass });
 };
 const signUp = async (req, res) => {
