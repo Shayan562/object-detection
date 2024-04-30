@@ -1,5 +1,5 @@
 const { default: mongoose } = require("mongoose");
-const { _MONGO } = require("../config");
+const { _MONGO } = require("./config");
 const items = require("./Models/itemModel");
 const UserDetails = require("./Models/userModels");
 const userRouter = require("./Routes/userRoutes");

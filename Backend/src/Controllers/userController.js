@@ -1,5 +1,5 @@
 const { userInfo, userExists } = require("../Database/userMongo");
-const { _SALT, _SECRETKEY } = require("../../config");
+const { _SALT, _SECRETKEY } = require("../config");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const UserDetailsModel = require("../Models/userModels");
